@@ -559,8 +559,6 @@ header .container .menu .links li a i {}
   border: 1px solid #ccc;
 }
 
-
-
 .features .box .img-holder {
   position: relative;
   overflow: hidden;
@@ -626,7 +624,7 @@ header .container .menu .links li a i {}
   font-weight: bold;
   font-size: 22px;
   padding: 10px 30px;
-  border-radius: 6px ;
+  border-radius: 6px;
   transition: var(--transition);
 }
 
@@ -661,6 +659,7 @@ header .container .menu .links li a i {}
   background-size: 200% 100%;
   background-position: right bottom;
 }
+
 .features .passion .img-holder::before {
   background-color: rgb(3 169 244 / 60%);
 }
@@ -678,6 +677,89 @@ header .container .menu .links li a i {}
 }
 
 .features .box:hover a {
-background-position: left bottom;
-color: white;
+  background-position: left bottom;
+  color: white;
+}
+
+
+/* TESTIMONIALS section  */
+
+.testimonials {
+  padding-top: var(--heading-padding);
+  padding-bottom: var(--heading-padding);
+  position: relative;
+  background-color: var(--section-background);
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+
+    .box {
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 2px 4px rgb(0 0 0 / 7%);
+      position: relative;
+
+      img {
+        position: absolute;
+        right: -10px;
+        top: -50px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 10px solid var(--section-background);
+      }
+
+      h3 {
+        color: var(--main-color);
+        margin: 0 0 10px;
+      }
+
+      .title {
+        color: #777;
+        margin-bottom: 10px;
+        display: block;
+      }
+
+      .rate .filled {
+        color: #ffc107;
+      }
+
+      p {
+        line-height: 1.5;
+        color: #777;
+        margin-top: 10px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+/* TEAM MEMBERS */
+
+.team {
+  padding-top: var(--heading-padding);
+  padding-bottom: var(--heading-padding);
+  position: relative;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+
+    .box {
+      position: relative;
+
+      &::before {
+        content: "";
+
+      }
+
+      .data img {
+        width: 100%;
+      }
+    }
+  }
+
 }
